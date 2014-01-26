@@ -5,6 +5,9 @@ project(zlib C)
 
 set(VERSION "1.2.8")
 
+# Unify make and MSVC builds (single output directory; get rid of Debug/ Release/)
+include (${CMAKE_CURRENT_SOURCE_DIR}/cmake/unify.cmake)
+
 option(ASM686 "Enable building i686 assembly implementation")
 option(AMD64 "Enable building amd64 assembly implementation")
 
